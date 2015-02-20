@@ -14,6 +14,7 @@ namespace :basic_structure do
   desc 'construct basic file structure'
 	task :construct do 
 		cd 'Folder'
+		mkdir 'img'
 		basic_struct = %w(index.html style.css script.js)
 		basic_struct.each do |task|
 			touch "#{task}"
