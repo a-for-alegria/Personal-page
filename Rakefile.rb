@@ -1,22 +1,29 @@
-task :default do 
-	puts '------------ Start \'Rake\''
-end
+namespace :basic_structure do
+  
+  desc 'start message'
+	task :start do 
+		puts '   Starting \'Rake\''
+	end
 
-task :core do 
-	puts '------------ Initializing basic structure...'
-	mkdir 'Folder'
-end
-
-task :construct do 
-	cd 'Folder'
-	basic_struct = %w(index.html style.css script.js)
-	basic_struct.each do |task|
-		touch "#{task}"
+  desc 'progress message'
+	task :begin do 
+		puts '   Initializing basic structure ...'
+		mkdir 'Folder'
+	end
+  
+  desc 'construct basic file structure'
+	task :construct do 
+		cd 'Folder'
+		basic_struct = %w(index.html style.css script.js)
+		basic_struct.each do |task|
+			touch "#{task}"
+		end
+	end
+  
+  desc 'launch tasks sequence'
+	task close: [:start, :begin, :construct] do 
+		puts '   Complete!'
 	end
 end
 
-task close: [:default, :core, :construct] do 
-	puts '------------ Complete'
-end
-
-
+task default: 'basic_structure:start'
