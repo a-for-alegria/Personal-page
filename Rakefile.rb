@@ -2,12 +2,12 @@ task :default do
 	puts '------------ Start \'Rake\''
 end
 
-task core: :default do 
+task :core do 
 	puts '------------ Initializing basic structure...'
 	mkdir 'Folder'
 end
 
-task construct: :core do 
+task :construct do 
 	cd 'Folder'
 	basic_struct = %w(index.html style.css script.js)
 	basic_struct.each do |task|
@@ -15,6 +15,8 @@ task construct: :core do
 	end
 end
 
-task close: :construct do 
+task close: [:default, :core, :construct] do 
 	puts '------------ Complete'
 end
+
+
