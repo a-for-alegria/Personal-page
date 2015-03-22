@@ -1,7 +1,14 @@
 $: << '.'
 
-require 'resume'
-require 'root_controller'
+require 'models/resume'
+require 'controllers/root_controller'
 require 'haml'
 
-run Resume
+use Rack::Static,
+  :urls => ["/js", "/css"],
+  :root => "public"
+
+map '/' do
+  run Resume
+end
+
