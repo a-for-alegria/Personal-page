@@ -42,14 +42,12 @@ h1 {
 	color: #aa3939;
 	font-family: 'Lobster Two', Georgia, Times, cursive;
 	text-align: center;
-	padding: 10px;
 }
 
 h2 {
 	font-size: 2em;
 	text-align: center;
 	font-family: 'Oswald', sans-serif;
-	padding: 10px;
 }
 h3 {
 	font-size: 1.5em;
@@ -78,6 +76,15 @@ header {
 	width: 100%;
 	min-height: 20%;
   background-color: #e3e3e3;
+}
+
+.header-content {
+  padding: 10px;
+  padding-bottom: 20px;
+  h1,
+  h2 {
+  	padding: 10px;
+  }
 }
 
 /*------------Main content area------------*/
