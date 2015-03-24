@@ -103,6 +103,9 @@ main {
 }
 
 .skills {
+	@media(max-width: 1024px) {
+    padding-bottom: 50px;
+	}
 	padding-top: 50px;
   li {
   	display: inline-block;
