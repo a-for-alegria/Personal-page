@@ -39,9 +39,18 @@ h4 {
 
 h1 {
 	font-size: 4em;
-	color: #aa3939;
 	font-family: 'Lobster Two', Georgia, Times, cursive;
 	text-align: center;
+	a {
+		color: #aa3939;
+		transition: color 0.3s ease;
+		&:hover {
+			color: darken(#aa3939, 15%);
+		}
+		&:active {
+			color: #aa3939;
+		}
+	}
 }
 
 h2 {
@@ -91,11 +100,10 @@ header {
 
 main {
   width: 60%;
+  max-height: 80%;
 	margin: 0 auto;
 	text-align: center;
-  min-height: 80%;
   background-color: #f0f0f0;
-  padding-bottom: 20px;
 }
 
 .description {
@@ -103,9 +111,6 @@ main {
 }
 
 .skills {
-	@media(max-width: 1024px) {
-    padding-bottom: 50px;
-	}
 	padding-top: 50px;
   li {
   	display: inline-block;
