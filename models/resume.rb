@@ -5,13 +5,7 @@ class Resume
 		when '/'  
 		  RootController.new(env).index
 		else
-			body = '
-		  <html>
-		    <body>
-		      <h1>Not found</h1>
-		    </body>
-		  </html>'
-			[404, {}, [body]]
+			RootController.new(env).not_found
 		end
   end
 end

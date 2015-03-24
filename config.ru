@@ -5,7 +5,7 @@ require 'controllers/root_controller'
 require 'haml'
 require 'sass/plugin/rack'
 
-#--------------Setuo Sass/Scsss--------------#
+#--------------Setup Sass/Scsss--------------#
 
 Sass::Plugin.options[:style] = :compressed
 Sass::Plugin.options[:cache] = false
