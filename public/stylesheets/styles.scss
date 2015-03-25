@@ -42,36 +42,6 @@ main {
   background-color: #f0f0f0;
 }
 
-.contacts {
-	@media(max-width: 1024px) {
-    display: block;
-	  padding: 10px 0 10px 0;
-	  width: 50%;
-	  margin: 0 auto;
-	  img {
-	  	vertical-align: middle;
-  	  margin-bottom: 5px;
-  	  margin-right: 5px;
-	  }
-	}
-	display: none;
-}
-
-.contacts-fixed {
-	@media(max-width: 1024px) {
-    display: none;
-	}
-  position: fixed;
-  top: 50%;
-  left: 2%;
-  img {
-  	vertical-align: middle;
-  	margin-bottom: 5px;
-  	margin-right: 5px;
-
-  }
-}
-
 h1,
 h2,
 h3,
@@ -153,6 +123,7 @@ header {
 /*------------Index page------------*/
 
 .description {
+	padding: 5px;
 	padding-top: 50px;
 }
 
@@ -209,6 +180,37 @@ content {
   top: 0;
   right: 0;
   padding: 10px;
+}
+
+/*------------Contacts------------*/
+
+.contacts {
+	@media(max-width: 1024px) {
+    display: block;
+	  padding: 20px 0 10px 0;
+	  width: 60%;
+	  margin: 0 auto;
+	  img {
+	  	vertical-align: middle;
+  	  margin-bottom: 5px;
+  	  margin-right: 5px;
+	  }
+	}
+	display: none;
+}
+
+.contacts-fixed {
+	@media(max-width: 1024px) {
+    display: none;
+	}
+  position: fixed;
+  top: 50%;
+  left: 2%;
+  img {
+  	vertical-align: middle;
+  	margin-bottom: 5px;
+  	margin-right: 5px;
+  }
 }
 
 /*------------404------------*/
