@@ -17,7 +17,7 @@
 /*------------ Global styles ------------*/
 html,
 body {
-	@media(max-width: 1024px) {
+	@media(max-width: 1023px) {
     font-size: 32px;
 	}
 	width: 100%;
@@ -28,6 +28,48 @@ body {
 
 body {
 	background-color: #f0f0f0;
+	position: relative;
+}
+
+main {
+	@media(max-width: 1024px) {
+    width: 100%;
+	}
+  width: 60%;
+  max-height: 80%;
+	margin: 0 auto;
+	text-align: center;
+  background-color: #f0f0f0;
+}
+
+.contacts {
+	@media(max-width: 1024px) {
+    display: block;
+	  padding: 10px 0 10px 0;
+	  width: 50%;
+	  margin: 0 auto;
+	  img {
+	  	vertical-align: middle;
+  	  margin-bottom: 5px;
+  	  margin-right: 5px;
+	  }
+	}
+	display: none;
+}
+
+.contacts-fixed {
+	@media(max-width: 1024px) {
+    display: none;
+	}
+  position: fixed;
+  top: 50%;
+  left: 2%;
+  img {
+  	vertical-align: middle;
+  	margin-bottom: 5px;
+  	margin-right: 5px;
+
+  }
 }
 
 h1,
@@ -66,7 +108,19 @@ h3 {
 h4 {font-size: 1.2em;}
 
 li {
-	list-style: none;
+  list-style: none;
+	display: inline-block;
+	padding: 10px;
+	margin: 0 10px 10px 0;
+	border-radius: 5px;
+	cursor: pointer;
+	color: #aa3939;
+	border: 2px solid #aa3939;
+  transition: background-color 0.3s ease, color 0.3s ease;
+	&:hover {
+    color: #f0f0f0;
+    background-color: #aa3939;
+	}
 }
 
 a {
@@ -96,15 +150,7 @@ header {
   }
 }
 
-/*------------Main content area------------*/
-
-main {
-  width: 60%;
-  max-height: 80%;
-	margin: 0 auto;
-	text-align: center;
-  background-color: #f0f0f0;
-}
+/*------------Index page------------*/
 
 .description {
 	padding-top: 50px;
@@ -112,21 +158,59 @@ main {
 
 .skills {
 	padding-top: 50px;
-  li {
-  	display: inline-block;
-  	padding: 10px;
-  	margin: 0 10px 10px 0;
-  	background-color: #959494;
-  	transition: background-color 0.3s ease, color 0.3s ease;
-  	border-radius: 5px;
-  	cursor: pointer;
-  	color: #f0f0f0;
-  	&:hover {
-  		color: black;
-      background-color: #c2c2c2;
-  	}
+}
+
+.projects-link {
+	@media(max-width: 1023px) {
+    display: block;
+	}
+	padding: 10px;
+	border: 2px solid #aa3939;
+	color: #aa3939;
+	border-radius: 20px;
+	display: inline-block;
+	margin: 30px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	&:hover {
+    color: #f0f0f0;
+    background-color: #aa3939;
+	}
+}
+/*------------Projects------------*/
+
+.projects-samples {
+	@media(max-width: 1024px) {
+    margin-bottom: 0;
+	}
+	margin-top: 50px;
+	margin-bottom: 10px;
+	border: 2px solid darken(#f0f0f0, 15%);
+	background-color: darken(#f0f0f0, 15%);
+  content {
+  	padding: 20px;
+  	display: block;
+  }
+  span {
+  	display: block;
+  	padding: 5px;
+  }
+  ul {
+  	padding-top: 20px;
   }
 }
+
+content {
+	position: relative;
+}
+
+.social-link {
+	display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
 /*------------404------------*/
 
 .not-found {

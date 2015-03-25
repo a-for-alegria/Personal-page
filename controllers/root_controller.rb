@@ -11,6 +11,11 @@ class RootController
 	  [200, {}, [body]]
   end
 
+  def projects
+    body = render_with_layout('public/views/projects.html.haml')
+    [200, {}, [body]]
+  end
+
   def not_found
     body = render_with_layout('public/views/404.html.haml')
     [404, {}, [body]]

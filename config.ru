@@ -15,7 +15,7 @@ use Sass::Plugin::Rack
 #--------------Set static assets directory--------------#
 
 use Rack::Static,
-  :urls => ["/js", "/stylesheets"],
+  :urls => ["/images", "/js", "/stylesheets"],
   :root => "public"
 
 map '/' do

@@ -4,6 +4,8 @@ class Resume
 		case path
 		when '/'  
 		  RootController.new(env).index
+		when '/projects'
+		  RootController.new(env).projects
 		else
 			RootController.new(env).not_found
 		end
